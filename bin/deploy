@@ -1,5 +1,6 @@
 #!/bin/bash
 
 ./gradlew installDist
-~/TicTacToe/build/install/tictactoe/bin/tictactoe
-
+rm -rf /tmp/install
+mv ~/TicTacToe/build/install /tmp/
+/tmp/install/tictactoe/bin/tictactoe

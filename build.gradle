@@ -39,3 +39,7 @@ jar {
  attributes("Main-Class": "com.tictactoe.main.HelloWorld")
  }
 }
+
+task stage {
+ dependsOn installDist
+}
