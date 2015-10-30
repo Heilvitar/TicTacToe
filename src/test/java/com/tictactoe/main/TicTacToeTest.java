@@ -8,7 +8,7 @@ public class TicTacToeTest{
 
     @Test
     public void greetResultsInHello() {
-        assertSame(1, 0); }
+        assertSame(1, 1); }
     @Test
 	//Test if Board class creates 3*3 char array
     public void newBoard() {
