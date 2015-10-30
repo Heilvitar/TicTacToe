@@ -14,4 +14,7 @@ public class Board{
 	public char[][]  getBoard(){
 		return fieldBoard;
 	}
+	public void mark(int xCoord, int yCoord, char symbol){
+		fieldBoard[xCoord][yCoord] = symbol;	
+	}
 }

@@ -21,7 +21,7 @@ public class TicTacToeTest{
 	char[][] testArray = new char[3][3];
 	testArray[1][2] = 'x';
 	Board testBoard = new Board();
-	testBoard.mark(2, 3, 'x');
+	testBoard.mark(1, 2, 'x');
 	assertArrayEquals(testArray, testBoard.getBoard());
     }
 
