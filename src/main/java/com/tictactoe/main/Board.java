@@ -8,13 +8,22 @@ public class Board{
 
 
 	public Board(){
-		fieldBoard = new char[BOARDSIZE][BOARDSIZE];		 
+		fieldBoard = new char[BOARDSIZE][BOARDSIZE];
+		for(int i = 0; i < BOARDSIZE; i++){
+			for(int j = 0; j < BOARDSIZE; j++){
+				fieldBoard[i][j] = '-';
+			}		 
+		}
 	}
 	
-	public char[][]  getBoard(){
+	public char[][] getBoard(){
 		return fieldBoard;
 	}
 	public void mark(int xCoord, int yCoord, char symbol){
 		fieldBoard[xCoord][yCoord] = symbol;	
+	}
+	
+	public char getMark(int xCoord, int yCoord){
+		return fieldBoard[xCoord][yCoord];
 	}
 }
