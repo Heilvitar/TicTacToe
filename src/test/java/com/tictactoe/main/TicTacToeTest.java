@@ -16,6 +16,14 @@ public class TicTacToeTest{
 	Board testBoard = new Board();
         assertArrayEquals(testArray, testBoard.getBoard());
     }
+    @Test
+    public void markBoard() {
+	char[][] testArray = new char[3][3];
+	testArray[1][2] = 'x';
+	Board testBoard = new Board();
+	testBoard.mark(2, 3, 'x');
+	assertArrayEquals(testArray, testBoard.getBoar);
+    }
 
 
 }
