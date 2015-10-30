@@ -1,8 +1,9 @@
 package com.tictactoe.main;
 import static spark.Spark.*;
+import java.util.Scanner;
 
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello");
-    }
+public class TicTacToe {
+	public static void main(String[] args) {
+        
+	}
 }
