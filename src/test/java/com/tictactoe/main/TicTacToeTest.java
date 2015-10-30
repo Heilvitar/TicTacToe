@@ -4,15 +4,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TicTacToe{
+public class TicTacToeTest{
 
     @Test
     public void greetResultsInHello() {
-        assertSame(1, 1); }
+        assertSame(1, 0); }
     @Test
-	//Add x to board, field 2,3
+	//Test if Board class creates 3*3 char array
     public void newBoard() {
-        assertSame(x, 2, 3, true); }
+	char[][] testArray = new char[3][3];
+	Board testBoard = new Board();
+        assertArrayEquals(testArray, testBoard.getBoard());
+    }
 
 
 }
