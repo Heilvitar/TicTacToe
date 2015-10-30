@@ -8,7 +8,8 @@ public class Game implements SparkApplication{
 	SparkApplication game = new Game();
 	String portNumber = System.getenv("PORT");
 	if(portNumber != null);{
-		setPort(Integer.parseInt(portNumber));	
+		System.out.println(portNumber);
+		//setPort(Integer.parseInt(portNumber));	
 	}
 	game.init();
     }
