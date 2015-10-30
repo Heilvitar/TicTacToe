@@ -11,14 +11,13 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = "com.tictactoe.main.Game"
-
 tasks.withType(FindBugs) {
     reports {
         xml.enabled = false
         html.enabled = true
     }
  }
+mainClassName = "com.tictactoe.main.TicTacToe"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -43,7 +42,7 @@ dependencies {
 
 jar {
  manifest {
- attributes("Main-Class": "com.tictactoe.main.Game")
+ attributes("Main-Class": "com.tictactoe.main.TicTacToe")
  }
 }
 
