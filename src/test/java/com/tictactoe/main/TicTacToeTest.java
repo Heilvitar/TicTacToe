@@ -22,7 +22,7 @@ public class TicTacToeTest{
 	testArray[1][2] = 'x';
 	Board testBoard = new Board();
 	testBoard.mark(2, 3, 'x');
-	assertArrayEquals(testArray, testBoard.getBoar);
+	assertArrayEquals(testArray, testBoard.getBoard());
     }
 
 
