@@ -9,12 +9,13 @@ public class Game implements SparkApplication{
 	String portNumber = System.getenv("PORT");
 	if(portNumber != null);{
 		System.out.println(portNumber);
-		//setPort(Integer.parseInt(portNumber));	
+		setPort(Integer.parseInt(portNumber));	
 	}
 	game.init();
     }
 
     public void init(){
+	get("/index", (req, res) -> "Hello World");
     	System.out.println("Hello");
     }
 }
