@@ -19,6 +19,11 @@ public class Game implements SparkApplication{
 		System.out.println("working");
 		res.status(200);
 		return res;
-	});
+	});	
+        post("/clickColumn", (req, res) -> {
+                System.out.println("id is: " + req.queryParams("id"));
+                res.status(200);
+                return res;
+        });
     }
 }
