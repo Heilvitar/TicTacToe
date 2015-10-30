@@ -15,7 +15,10 @@ public class Game implements SparkApplication{
     }
 
     public void init(){
-	get("/index", (req, res) -> "Hello World");
-    	System.out.println("Hello");
+	post("/function", (req, res) -> {
+		System.out.println("working");
+		res.status(200);
+		return res;
+	});
     }
 }
