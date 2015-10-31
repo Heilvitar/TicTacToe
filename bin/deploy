@@ -3,4 +3,5 @@
 ./gradlew installDist
 rm -rf /tmp/install
 cp -r ~/TicTacToe/build/install /tmp/
+chmod 777 -R /tmp/install
 /tmp/install/tictactoe/bin/tictactoe
