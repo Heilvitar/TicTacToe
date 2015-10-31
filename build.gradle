@@ -41,10 +41,19 @@ sourceSets {
 	seleniumXvfb
 }
 
+jacoco {
+    toolVersion = "0.7.4.201502262128"
+}
+
 jacocoTestReport {
     group = "Reporting"
     description = "Generate Jacoco coverage reports after running tests."
     additionalSourceDirs = files(sourceSets.main.allJava.srcDirs);
+    reports {
+      xml.enabled false
+      csv.enabled false
+      html.destination "${projectDir}/reports/jacocoHtml"
+  }
 }
 
 mainClassName = "com.tictactoe.main.TicTacToe"
@@ -76,26 +85,16 @@ dependencies {
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
 
-task selenium(type: Test, dependsOn: installApp) {
+task selenium(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
 
-    ant.condition(property: "os", value: "windows") { os(family: "windows") }
-    ant.condition(property: "os", value: "unix"   ) { os(family: "unix")    }
-
     doFirst {
-        switch(ant.properties.os) {
-            case 'unix':
-                'build/install/TicTacToe/bin/tictactoe &'.execute()
-                break
-            case 'windows':
-                'build\\install\\TicTacToe\\bin\\tictactoe.bat'.execute()
-                break
-        }
+        'build/install/TicTacToe/bin/tictactoe &'.execute()
     }
 }
 
-task seleniumXvfb(type: Test, dependsOn: installApp) {
+task seleniumXvfb(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
 
