@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tictactoe.main.HelloWorldTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-10-28T18:57:41" hostname="i-7f3b5dd9.csd07cloud.internal" time="0.001">
+  <properties/>
+  <testcase name="greetResultsInHello" classname="com.tictactoe.main.HelloWorldTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
