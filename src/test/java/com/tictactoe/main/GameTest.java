@@ -66,25 +66,30 @@ public class GameTest
 	public void testHorizontalWin(){
 	    Game testGame2 = new Game();
 	    testGame2.inputFromPlayer(0,0);
-	    testGame2.inputFromPlayer(0,1);
-	    testGame2.inputFromPlayer(0,2);
+	    testGame2.inputFromPlayer(1,0);
+	    testGame2.inputFromPlayer(2,0);
 	    assertEquals(true, testGame2.checkWin());
 	}
 
         @Test
+        public void testWin(){
+            Game testGame2 = new Game();
+            assertEquals(false, testGame2.checkWin());
+        }
+	@Test
 	public void testHorizontalWin2(){
 	    Game testGame2 = new Game();
-	    testGame2.inputFromPlayer(1,0);
+	    testGame2.inputFromPlayer(0,1);
 	    testGame2.inputFromPlayer(1,1);
-	    testGame2.inputFromPlayer(1,2);
+	    testGame2.inputFromPlayer(2,1);
 	    assertEquals(true, testGame2.checkWin());
 	}
 
         @Test
 	public void testHorizontalWin3(){
 	    Game testGame2 = new Game();
-	    testGame2.inputFromPlayer(2,0);
-	    testGame2.inputFromPlayer(2,1);
+	    testGame2.inputFromPlayer(0,2);
+	    testGame2.inputFromPlayer(1,2);
 	    testGame2.inputFromPlayer(2,2);
 	    assertEquals(true, testGame2.checkWin());
 	}

@@ -47,7 +47,7 @@ public class Game{
 		    if((gameBoard.getMark(i, 0) == cPSymbol) && (gameBoard.getMark(i, 1) == cPSymbol) && (gameBoard.getMark(i, 2) == cPSymbol)){
 				return true;
 			}
-		    if((gameBoard.getMark(0, i) == cPSymbol) && (gameBoard.getMark(1, i) == cPSymbol) && (gameBoard.getMark(2, i) == cPSymbol)){
+		    else if((gameBoard.getMark(0, i) == cPSymbol) && (gameBoard.getMark(1, i) == cPSymbol) && (gameBoard.getMark(2, i) == cPSymbol)){
 				return true;	
 			} 
 			
@@ -58,7 +58,7 @@ public class Game{
                 {
                         return true;
                 }
-		if((gameBoard.getMark(0,2) == cPSymbol) && (gameBoard.getMark(1,1) == cPSymbol) && (gameBoard.getMark(2,0) == cPSymbol))
+		else if((gameBoard.getMark(0,2) == cPSymbol) && (gameBoard.getMark(1,1) == cPSymbol) && (gameBoard.getMark(2,0) == cPSymbol))
 		{
 			return true;
 		}
