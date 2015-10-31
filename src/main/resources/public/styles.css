@@ -1,8 +1,8 @@
 
 body {
     background-color: black;
-    /* background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");*/
-  background-image: url("http://38.media.tumblr.com/772f593717196ce571d113b3eeebacb4/tumblr_mnjrchBip21qdje50o3_500.gif");
+    background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");
+ /* background-image: url("http://38.media.tumblr.com/772f593717196ce571d113b3eeebacb4/tumblr_mnjrchBip21qdje50o3_500.gif");*/
 }
 
 h1 {
@@ -11,43 +11,17 @@ h1 {
     text-shadow: 1px 1px;
 }
 
-
-
-
 table {
     border-collapse: collapse;
     margin: auto;
-   /* width: 50%;
-    height: 50%;*/
-    border: 1px solid darkblue;
+    border: 2px solid darkblue;
     background-color: black;
 }
 
 tr, td {
     height: 150px;
     width: 150px;
-    border: 1px solid navy;
+    border: 2px solid navy;
     margin: 0px;
 
 }
-/*
-div {
-    
-    width: 80%;
-    margin: auto;
-    padding: 10px;
-
-}*/
-/*
-
-#grid {
-    width: 300px;
-    height: 300px;        
-}
-
-.cell {
-    outline: 1px solid red;
-    float: left;
-    height: 100px;
-    width: 100px;    
-}*/
