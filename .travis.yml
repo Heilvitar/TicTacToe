@@ -3,6 +3,11 @@ language: java
 jdk:
  - oraclejdk8
 
- script:
-   - ./gradlew check
-   - ./gradlew seleniumXvfb
+script:
+  - ./gradlew check
+  - ./gradlew seleniumXvfb
+
+deploy: 
+  provider: heroku
+  api_key: 'db98b93f-41ce-493f-bcc8-0527c91cdea1'
+  app: thawing-harbor-6879

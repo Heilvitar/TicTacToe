@@ -10,15 +10,53 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'jacoco'
+apply plugin: 'findbugs'
 
-mainClassName = "com.tictactoe.main.Game"
+task findbugs(type: FindBugs) {
 
-tasks.withType(FindBugs) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
+    classes = fileTree(project.rootDir.absolutePath).include("**/*.class");
+    source = fileTree(project.rootDir.absolutePath).include("**/*.java");
+    classpath = files()
+
+    findbugs {
+            toolVersion = "3.0.1"
+            ignoreFailures = true
+            effort = "max"
+            reportLevel = "low"
+            reportsDir = file("${projectDir}/reports/findbugs")
+            sourceSets = [it.sourceSets.main, it.sourceSets.test]
     }
- }
+
+    tasks.withType(FindBugs) {
+            reports {
+                    xml.enabled = false
+                    html.enabled = true
+            }
+     }
+}
+
+sourceSets {
+	selenium
+	seleniumXvfb
+}
+
+jacoco {
+    toolVersion = "0.7.4.201502262128"
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs);
+    reports {
+      xml.enabled false
+      csv.enabled false
+      html.destination "${projectDir}/reports/jacocoHtml"
+  }
+}
+
+mainClassName = "com.tictactoe.main.TicTacToe"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -39,11 +77,42 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
+
+    seleniumCompile 'junit:junit:4.11'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
+
+    seleniumXvfbCompile 'junit:junit:4.11'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
+}
+
+task selenium(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    doFirst {
+        'build/install/TicTacToe/bin/tictactoe &'.execute()
+    }
+}
+
+task seleniumXvfb(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    environment "DISPLAY", ":99"
+
+    doFirst {
+        'bin/xvfb start'.execute()
+        'build/install/TicTacToe/bin/tictactoe &'.execute()
+    }
+
+    doLast {
+        'bin/xvfb stop'.execute()
+    } 
 }
 
 jar {
  manifest {
- attributes("Main-Class": "com.tictactoe.main.Game")
+ attributes("Main-Class": "com.tictactoe.main.TicTacToe")
  }
 }
 
