@@ -6,7 +6,6 @@ public class Board{
 	
 	private char[][] fieldBoard;
 	
-
 	public Board(){
 		fieldBoard = new char[BOARDSIZE][BOARDSIZE];
 		for(int i = 0; i < BOARDSIZE; i++){
@@ -17,8 +16,9 @@ public class Board{
 	}
 	
 	public char[][] getBoard(){
-		return fieldBoard;
+		return fieldBoard.clone();
 	}
+	
 	public void mark(int xCoord, int yCoord, char symbol){
 		fieldBoard[xCoord][yCoord] = symbol;	
 	}

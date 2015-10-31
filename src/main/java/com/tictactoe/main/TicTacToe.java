@@ -7,11 +7,10 @@ public class TicTacToe implements SparkApplication{
 	staticFileLocation("/public");
 	SparkApplication ticTacToe = new TicTacToe();
 	String portNumber = System.getenv("PORT");
-	if(portNumber != null);{
-		System.out.println(portNumber);
-		setPort(Integer.parseInt(portNumber));	
+	if(portNumber != null){
+		setPort(Integer.parseInt(portNumber));
+		ticTacToe.init();
 	}
-	ticTacToe.init();
     }
 
     public void init(){

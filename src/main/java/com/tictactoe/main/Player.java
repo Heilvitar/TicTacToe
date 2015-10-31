@@ -1,15 +1,15 @@
-package src.main.java.com;
+package com.tictactoe.main;
 
 public class Player{
 
-    private char PlayerSymbol;
+    private char symbol;
    
     public Player (char s){
-	PlayerSymbol = s;
+	symbol = s;
     }
     
     public char getPlayerSymbol(){
-	return PlayerSymbol;
+	return symbol;
     }
    
 }
