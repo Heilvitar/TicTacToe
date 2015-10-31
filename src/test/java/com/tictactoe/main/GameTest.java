@@ -35,6 +35,20 @@ public class GameTest
 		assertNotEquals('-', testGame.gameBoard.getMark(2,1));
 	}
         
+        @Test
+	public void testInputFromPlayer2() {
+	    Game testGame2 = new Game();
+	    testGame2.inputFromPlayer(0,0);
+	    testGame2.changePlayersTurn();
+	    assertEquals(false, testGame2.inputFromPlayer(0,0));
+	}
+
+        @Test
+	public void testInputFromPlayer3() {
+	    Game testGame2 = new Game();
+	    testGame2.inputFromPlayer(0,0);
+	    assertEquals(false, testGame2.inputFromPlayer(0,0));
+	}
         
         @Test
 	public void testHorizontalWin(){
