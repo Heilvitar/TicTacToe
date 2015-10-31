@@ -11,16 +11,11 @@ h1 {
     text-shadow: 1px 1px;
 }
 
-
-
-
 table {
     border-collapse: collapse;
     margin: auto;
-   /* width: 50%;
-    height: 50%;*/
     border: 1px solid darkblue;
-    background-color: black;
+    background-color: #1B1B1B;
 }
 
 tr, td {
@@ -30,24 +25,3 @@ tr, td {
     margin: 0px;
 
 }
-/*
-div {
-    
-    width: 80%;
-    margin: auto;
-    padding: 10px;
-
-}*/
-/*
-
-#grid {
-    width: 300px;
-    height: 300px;        
-}
-
-.cell {
-    outline: 1px solid red;
-    float: left;
-    height: 100px;
-    width: 100px;    
-}*/
