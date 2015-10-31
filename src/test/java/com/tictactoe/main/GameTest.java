@@ -15,15 +15,23 @@ public class GameTest
         @Test
         public void testPlayer2Test(){
                 assertSame('o', testGame.player2.getPlayerSymbol());
-        }	
- 	public void testBoard(){
-                assertSame('-', testGame.gameBoard.getBoard()[0][0]);
         }
+	@Test	
+ 	public void testBoard(){
+                assertSame('-', testGame.gameBoard.getMark(1, 2));
+        }
+        @Test
 	public void testPlayersTurn(){
 		assertSame(testGame.player1, testGame.getCurrentPlayer());
 	}
+        @Test
 	public void testChangePlaeyrsTurn(){
 		testGame.changePlayersTurn();
 		assertSame(testGame.player2, testGame.getCurrentPlayer());
-	}	
+	}
+        @Test	
+	public void testInputFromPlayer(){
+		testGame.inputFromPlayer(2, 1);
+		assertNotEquals('-', testGame.gameBoard.getMark(2,1));
+	}
 }
