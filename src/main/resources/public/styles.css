@@ -1,0 +1,31 @@
+body {
+    background-color: lightpink;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+      text-shadow: 1px 1px;
+}
+
+table {
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+th, td {
+    height: 200px;
+    border: 1px solid black;
+
+}
+
+div {
+    
+   
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+
+}
