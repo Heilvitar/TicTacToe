@@ -3,7 +3,8 @@ package com.tictactoe.main;
 public class Board{
 	
 	private static final int BOARDSIZE = 3;
-	
+        private int markCount;
+
 	private char[][] fieldBoard;
 	
 	public Board(){
@@ -13,6 +14,7 @@ public class Board{
 				fieldBoard[i][j] = '-';
 			}		 
 		}
+		markCount = 0;
 	}
 	
 	public char[][] getBoard(){
@@ -20,10 +22,22 @@ public class Board{
 	}
 	
 	public void mark(int xCoord, int yCoord, char symbol){
-		fieldBoard[xCoord][yCoord] = symbol;	
+		fieldBoard[xCoord][yCoord] = symbol;
+		markCount++;
 	}
 	
 	public char getMark(int xCoord, int yCoord){
 		return fieldBoard[xCoord][yCoord];
 	}
+        
+        public boolean isFull()
+        {
+	    if(markCount == 9) {
+		return true;
+	    }
+	    else {
+		return false;
+	    }
+        }
+
 }

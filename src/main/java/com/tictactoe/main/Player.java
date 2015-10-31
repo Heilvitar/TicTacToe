@@ -8,7 +8,7 @@ public class Player{
 	symbol = s;
     }
     
-    public char getPlayerSymbol(){
+    public char getSymbol(){
 	return symbol;
     }
    
