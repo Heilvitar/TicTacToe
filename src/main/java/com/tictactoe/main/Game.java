@@ -33,8 +33,12 @@ public class Game{
                 }
 
 	}
-	public void inputFromPlayer(int xCoord, int yCoord){
-		gameBoard.getBoard()[xCoord][yCoord] = getCurrentPlayer().getSymbol();
+	public boolean inputFromPlayer(int xCoord, int yCoord){
+	    if(gameBoard.getMark(xCoord, yCoord) == '-') {
+		gameBoard.mark(xCoord, yCoord, getCurrentPlayer().getSymbol());
+		return true;
+	    }
+	    return false;
 	}
 	//gameBoard.mark();
 	public boolean checkWin(){
