@@ -25,10 +25,22 @@ public class GameTest
 		assertSame(testGame.player1, testGame.getCurrentPlayer());
 	}
         @Test
-	public void testChangePlaeyrsTurn(){
-		testGame.changePlayersTurn();
-		assertSame(testGame.player2, testGame.getCurrentPlayer());
+	public void testChangePlayersTurn(){
+		assertSame(testGame.player1, testGame.getCurrentPlayer());
 	}
+	@Test
+        public void testChangePlayersTurn2(){
+                testGame.changePlayersTurn();
+                assertSame(testGame.player2, testGame.getCurrentPlayer());
+        }	
+        @Test
+        public void testChangePlayersTurn3(){
+                testGame.changePlayersTurn();
+		testGame.changePlayersTurn();
+                assertSame(testGame.player1, testGame.getCurrentPlayer());
+        }
+
+
         @Test	
 	public void testInputFromPlayer(){
 		testGame.inputFromPlayer(2, 1);
@@ -62,18 +74,18 @@ public class GameTest
         @Test
 	public void testHorizontalWin2(){
 	    Game testGame2 = new Game();
-	    testGame2.inputFromPlayer(0,0);
-	    testGame2.inputFromPlayer(0,1);
-	    testGame2.inputFromPlayer(0,2);
+	    testGame2.inputFromPlayer(1,0);
+	    testGame2.inputFromPlayer(1,1);
+	    testGame2.inputFromPlayer(1,2);
 	    assertEquals(true, testGame2.checkWin());
 	}
 
         @Test
 	public void testHorizontalWin3(){
 	    Game testGame2 = new Game();
-	    testGame2.inputFromPlayer(1,0);
-	    testGame2.inputFromPlayer(1,1);
-	    testGame2.inputFromPlayer(1,2);
+	    testGame2.inputFromPlayer(2,0);
+	    testGame2.inputFromPlayer(2,1);
+	    testGame2.inputFromPlayer(2,2);
 	    assertEquals(true, testGame2.checkWin());
 	}
 
