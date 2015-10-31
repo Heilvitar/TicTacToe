@@ -19,4 +19,11 @@ public class GameTest
  	public void testBoard(){
                 assertSame('-', testGame.gameBoard.getBoard()[0][0]);
         }
+	public void testPlayersTurn(){
+		assertSame(testGame.player1, testGame.getCurrentPlayer());
+	}
+	public void testChangePlaeyrsTurn(){
+		testGame.changePlayersTurn();
+		assertSame(testGame.player2, testGame.getCurrentPlayer());
+	}	
 }
