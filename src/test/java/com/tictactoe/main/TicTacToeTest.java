@@ -57,13 +57,13 @@ public class TicTacToeTest{
 	testBoard.mark(2,0,'x');
 	testBoard.mark(2,1,'x');
 	testBoard.mark(2,2,'x');
-	assertEquals(true, testBoard.isBoardFull());
+	assertEquals(true, testBoard.isFull());
     }
 
     @Test
     public void testIfBoardIsFull2() {
 	Board testBoard = new Board();
-	assertEquals(false, testBoard.isBoardFull());
+	assertEquals(false, testBoard.isFull());
     }
 
 }
