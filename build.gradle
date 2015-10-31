@@ -20,7 +20,7 @@ task findbugs(type: FindBugs) {
     classpath = files()
 
     findbugs {
-            toolVersion = "2.0.3"
+            toolVersion = "3.0.1"
             ignoreFailures = true
             effort = "max"
             reportLevel = "low"
