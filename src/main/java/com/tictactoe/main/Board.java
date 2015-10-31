@@ -5,7 +5,7 @@ public class Board{
 	private static final int BOARDSIZE = 3;
 	
 	private char[][] fieldBoard;
-
+	
 
 	public Board(){
 		fieldBoard = new char[BOARDSIZE][BOARDSIZE];
