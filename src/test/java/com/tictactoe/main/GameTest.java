@@ -102,4 +102,23 @@ public class GameTest
 	}
 
 
+        @Test
+	public void testRightDiagonalWin(){
+	    Game testGame2 = new Game();
+	    testGame2.inputFromPlayer(0,0);
+	    testGame2.inputFromPlayer(1,1);
+	    testGame2.inputFromPlayer(2,2);
+	    assertEquals(true, testGame2.checkWin());
+	}
+
+        @Test
+	public void testLeftDiagonalWin(){
+	    Game testGame2 = new Game();
+	    testGame2.inputFromPlayer(2,0);
+	    testGame2.inputFromPlayer(1,1);
+	    testGame2.inputFromPlayer(0,2);
+	    assertEquals(true, testGame2.checkWin());
+	}
+
+
 }
