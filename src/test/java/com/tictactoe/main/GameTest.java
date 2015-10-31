@@ -134,5 +134,28 @@ public class GameTest
 	    assertEquals(true, testGame2.checkWin());
 	}
 
+        @Test
+	public void testGameTie() {
+	    Game testGame2 = new Game();
+	    assertEquals(false, testGame2.checkTie());
+	}
+
+        @Test
+	public void testGameTie2() {
+	    Game testGame2 = new Game();
+	    testGame2.inputFromPlayer(0,0);
+	    testGame2.inputFromPlayer(0,1);
+	    testGame2.inputFromPlayer(0,2);
+
+	    testGame2.inputFromPlayer(1,0);
+	    testGame2.inputFromPlayer(1,1);
+	    testGame2.inputFromPlayer(1,2);
+
+	    testGame2.inputFromPlayer(2,0);
+	    testGame2.inputFromPlayer(2,1);
+	    testGame2.inputFromPlayer(2,2);
+
+	    assertEquals(true, testGame2.checkTie());
+	}
 
 }
