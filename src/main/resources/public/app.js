@@ -4,8 +4,8 @@ function clicked(id){
 	    type: 'POST',
 	    url: '/clickColumn',
 	    data: 'id=' + id,
-	    success: function(){
-		console.log("response");
+	    success: function(res){
+		console.log("response: " + res);
 		var audio = $("#mySoundClip")[0];
 		audio.play();
 	    },
