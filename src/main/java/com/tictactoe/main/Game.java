@@ -65,4 +65,9 @@ public class Game{
 
 		return false;
 	}
+        
+        public boolean checkTie()
+        {
+	    return gameBoard.isFull();
+	}
 }
