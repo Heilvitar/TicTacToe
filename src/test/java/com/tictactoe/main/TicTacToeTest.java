@@ -44,6 +44,26 @@ public class TicTacToeTest{
         Board testBoard = new Board();
         assertEquals('-', testBoard.getMark(0, 1));
     }
-    
+
+    @Test
+    public void testIfBoardIsFull() {
+	Board testBoard = new Board();
+	testBoard.mark(0,0,'x');
+	testBoard.mark(0,1,'x');
+	testBoard.mark(0,2,'x');
+	testBoard.mark(1,0,'x');
+	testBoard.mark(1,1,'x');
+	testBoard.mark(1,2,'x');
+	testBoard.mark(2,0,'x');
+	testBoard.mark(2,1,'x');
+	testBoard.mark(2,2,'x');
+	assertEquals(true, testBoard.isFull());
+    }
+
+    @Test
+    public void testIfBoardIsFull2() {
+	Board testBoard = new Board();
+	assertEquals(false, testBoard.isFull());
+    }
 
 }

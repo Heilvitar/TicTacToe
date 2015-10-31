@@ -33,23 +33,41 @@ public class Game{
                 }
 
 	}
-	public void inputFromPlayer(int xCoord, int yCoord){
-		gameBoard.getBoard()[xCoord][yCoord] = getCurrentPlayer().getPlayerSymbol();
+	public boolean inputFromPlayer(int xCoord, int yCoord){
+	    if(gameBoard.getMark(xCoord, yCoord) == '-') {
+		gameBoard.mark(xCoord, yCoord, getCurrentPlayer().getSymbol());
+		return true;
+	    }
+	    return false;
 	}
 	//gameBoard.mark();
-	public bool checkWin(){
-		char cPSymbol = currentPlayer.getPlayerSymbol();
+	public boolean checkWin(){
+	        char cPSymbol = getCurrentPlayer().getSymbol();
 		for(int i = 0; i < 3; i++){
-			if(gameBoard.getMar(i, 0) == cPSymbol && gameBoard.getMar(i, 1) == cPSymbol && gameBoard.getMar(i, 2) == cPSymbol){
+		    if((gameBoard.getMark(i, 0) == cPSymbol) && (gameBoard.getMark(i, 1) == cPSymbol) && (gameBoard.getMark(i, 2) == cPSymbol)){
 				return true;
 			}
-			if(gameBoard.getMar(0, i) == cPSymbol && gameBoard.getMar(1, i) == cPSymbol && gameBoard.getMar(2, i) == cPSymbol){
+		    if((gameBoard.getMark(0, i) == cPSymbol) && (gameBoard.getMark(1, i) == cPSymbol) && (gameBoard.getMark(2, i) == cPSymbol)){
 				return true;	
 			} 
-		
+			
 		}
-		
-		
-	
+
+
+                if((gameBoard.getMark(0,0) == cPSymbol) && (gameBoard.getMark(1,1) == cPSymbol) && (gameBoard.getMark(2,2) == cPSymbol))
+                {
+                        return true;
+                }
+		if((gameBoard.getMark(0,2) == cPSymbol) && (gameBoard.getMark(1,1) == cPSymbol) && (gameBoard.getMark(2,0) == cPSymbol))
+		{
+			return true;
+		}
+
+		return false;
+	}
+        
+        public boolean checkTie()
+        {
+	    return gameBoard.isFull();
 	}
 }
