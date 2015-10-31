@@ -5,14 +5,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TicTacToeTest{
-
+	
+    //Test if Board class creates 3*3 char array
     @Test
-    public void greetResultsInHello() {
-        assertSame(1, 1); }
-    @Test
-	//Test if Board class creates 3*3 char array
     public void newBoard() {
-	char[][] testArray = new char[3][3];      
+	char[][] testArray = new char[3][3];     
         for(int i = 0; i < 3; i++){
         	for(int j = 0; j < 3; j++){
                 	testArray[i][j] = '-';
@@ -39,13 +36,13 @@ public class TicTacToeTest{
     public void getMarkTest() {
         Board testBoard = new Board();
         testBoard.mark(1, 2, 'x');
-        assertSame('x', testBoard.getMark(1, 2));
+        assertEquals('x', testBoard.getMark(1, 2));
     }
 
     @Test
     public void getMarkTestEmpty() {
         Board testBoard = new Board();
-        assertSame('-', testBoard.getMark(0, 1));
+        assertEquals('-', testBoard.getMark(0, 1));
     }
     
 
