@@ -13,16 +13,33 @@ apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'findbugs'
 
+task findbugs(type: FindBugs) {
+
+    classes = fileTree(project.rootDir.absolutePath).include("**/*.class");
+    source = fileTree(project.rootDir.absolutePath).include("**/*.java");
+    classpath = files()
+
+    findbugs {
+            toolVersion = "2.0.3"
+            ignoreFailures = true
+            effort = "max"
+            reportLevel = "low"
+            reportsDir = file("${projectDir}/reports/findbugs")
+            sourceSets = [it.sourceSets.main, it.sourceSets.test]
+    }
+
+    tasks.withType(FindBugs) {
+            reports {
+                    xml.enabled = false
+                    html.enabled = true
+            }
+     }
+}
+
 sourceSets {
 	selenium
 	seleniumXvfb
 }
-tasks.withType(FindBugs) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
-    }
- }
 
 jacocoTestReport {
     group = "Reporting"
