@@ -92,13 +92,13 @@ Short description for use of each environment
 - Integration Server: QStack from Advania (using SSH)
 - Programming Language:  Java
 - Tests -  JUnit and Selenium IDE:
--  - JUnit for unit testing and Selenium  for functional testing
+  * JUnit for unit testing and Selenium  for functional testing
 - Gradle: To enable automatic build scripts
 - Continuous Integration Server - Travis
-- - for continouos delivery and also performs all unit and end-to-end tests, and finally builds the application.
+  * for continouos delivery and also performs all unit and end-to-end tests, and finally builds the application.
 - Version Control Server: GitHub
 - Staging/Production Environment: Heroku
-- - Heroku is a cloud platform based on a managed container system, with integrated data services and a powerful ecosystem, for deploying and running modern apps.- Gradle: To enable automatic build  
+  *  Heroku is a cloud platform based on a managed container system, with integrated data services and a powerful ecosystem, for deploying and running modern apps.- Gradle: To enable automatic build  
 
 ###Staging and Production
 After the web application has been built and pushed on to Github, Travis receives the code. Travis then tests it and if it passes all the tests then it deploys and runs the application on Heroku which displays the final product. 
