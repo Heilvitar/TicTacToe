@@ -25,3 +25,12 @@ tr, td {
     margin: 0px;
 
 }
+
+.img {
+    max-width:80%;
+    max-height:80%;
+}
+
+#status{
+    color:red;
+}
