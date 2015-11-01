@@ -4,15 +4,14 @@
   <meta charset="utf-8">
   <title>TicQuackToe</title>
   <meta name="description">
-  <meta name="Heilarvitar" content="TicTacToe">
+  <meta name="Heilarvitar" content="TicQuackToe">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
   <body>
-	<button class="btn btn-default" onclick="resetGame()">Play Again</button>
 	<div >
-	   <h1>TicTacToe</h1>
+	   <h1>TicQuackToe</h1>
 	   <h2 id="status"></h2>
 	      <table>
 			<tr>
@@ -32,6 +31,9 @@
 			</tr>
            </table>
 	</div>
+    <div id="centerbutton">
+	    <button onclick="resetGame()">Play Again!</button>
+    </div>
       <audio controls hidden id="mySoundClip">
            <source src="http://www.soundjay.com/button/sounds/button-3.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
