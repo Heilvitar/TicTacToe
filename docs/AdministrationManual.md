@@ -6,8 +6,7 @@ Atli Gudmundsson, Brynja Skuladottir, Helgi Oskarsson, Hlynur Halldorsson, Ragna
 ###Introduction
 This following Administration Manual describes how to set the web application TicTacToe up and get it to run, also on a fresh machine. Follow next steps on How to install and run the program on clients machine (in case of simple desktop program) and how to deploy, run and maintain in case of client/server or web application.
 
-
-nstructions for running TicTacToe locally on yout computer:
+### Instruction for running TicTacToe locally on yout computer:
 
 #### Windows
 
