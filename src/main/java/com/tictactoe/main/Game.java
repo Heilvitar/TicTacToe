@@ -6,8 +6,6 @@ public class Game{
 	public Board gameBoard;
 	private int playersTurn;
 	
-	//public Scanner input = new Scanner(System.in);
-	
 	public Game()
 	{
 		this.player1 = new Player('x');
