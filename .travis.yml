@@ -9,5 +9,5 @@ script:
 
 deploy: 
   provider: heroku
-  api_key: 'db98b93f-41ce-493f-bcc8-0527c91cdea1'
+  api_key: 'bdaac7ab-4951-4c60-bc92-dd1246bf27a4'
   app: thawing-harbor-6879
