@@ -1,13 +1,14 @@
 
 body {
     background-color: black;
-    background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif"); /*
- background-image: url("http://38.media.tumblr.com/772f593717196ce571d113b3eeebacb4/tumblr_mnjrchBip21qdje50o3_500.gif");*/
+    background-image: url("img/giphy_looped_minimized.gif");
+    /*background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");*/
+ /* background-image: url("http://38.media.tumblr.com/772f593717196ce571d113b3eeebacb4/tumblr_mnjrchBip21qdje50o3_500.gif");*/
 }
 
 h1 {
     color: black;
-    margin-left: 20px;
+    text-align: center;
     text-shadow: 1px 1px;
 }
 
@@ -27,10 +28,10 @@ tr, td {
 }
 
 .img {
-    max-width:80%;
-    max-height:80%;
+    visibility: none;
 }
 
 #status{
-    color:red;
+    color: white;	
+    text-align: center;
 }

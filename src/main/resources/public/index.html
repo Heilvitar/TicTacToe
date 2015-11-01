@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TicTacToe</title>
+  <title>TicQuackToe</title>
   <meta name="description">
   <meta name="Heilarvitar" content="TicTacToe">
   <link rel="stylesheet" href="styles.css">
@@ -10,25 +10,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
   <body>
-	<button class="btn btn-default" onclick="resetGame()">Reset</button>
+	<button class="btn btn-default" onclick="resetGame()">Play Again</button>
 	<div >
 	   <h1>TicTacToe</h1>
 	   <h2 id="status"></h2>
 	      <table>
 			<tr>
-			   <td id=00 onclick="clicked(this.id)"> 1 </td>
-			   <td id=01 onclick="clicked(this.id)"> 2 </td>
-			   <td id=02 onclick="clicked(this.id)"> 3 </td>
+			   <td id=00 onclick="clicked(this.id)"><img id=00o class="img" src="img/thief.png"></img><img id=00x class="img" src="img/scrooge.png"></img></td>
+			   <td id=01 onclick="clicked(this.id)"><img id=01o class="img" src="img/thief.png"></img><img id=01x class="img" src="img/scrooge.png"></img></td>
+			   <td id=02 onclick="clicked(this.id)"><img id=02o class="img" src="img/thief.png"></img><img id=02x class="img" src="img/scrooge.png"></img></td>
 		        </tr>
 			<tr>
-			   <td id=10 onclick="clicked(this.id)"> 4 </td>
-			   <td id=11 onclick="clicked(this.id)"> 5 </td>
-			   <td id=12 onclick="clicked(this.id)"> 6 </td>
+			   <td id=10 onclick="clicked(this.id)"><img id=10o class="img" src="img/thief.png"></img><img id=10x class="img" src="img/scrooge.png"></img></td>
+			   <td id=11 onclick="clicked(this.id)"><img id=11o class="img" src="img/thief.png"></img><img id=11x class="img" src="img/scrooge.png"></img></td>
+			   <td id=12 onclick="clicked(this.id)"><img id=12o class="img" src="img/thief.png"></img><img id=12x class="img" src="img/scrooge.png"></img></td>
 		        </tr>
 			<tr>
-		           <td id=20 onclick="clicked(this.id)"> 7 </td>
-			   <td id=21 onclick="clicked(this.id)"> 8 </td>
-		           <td id=22 onclick="clicked(this.id)"> 9 </td>
+		           <td id=20 onclick="clicked(this.id)"><img id=20o class="img" src="img/thief.png"></img><img id=20x class="img" src="img/scrooge.png"></img></td>
+			   <td id=21 onclick="clicked(this.id)"><img id=21o class="img" src="img/thief.png"></img><img id=21x class="img" src="img/scrooge.png"></img></td>
+		           <td id=22 onclick="clicked(this.id)"><img id=22o class="img" src="img/thief.png"></img><img id=22x class="img" src="img/scrooge.png"></img></td>
 			</tr>
            </table>
 	</div>

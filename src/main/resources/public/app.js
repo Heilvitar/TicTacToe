@@ -21,29 +21,28 @@ function clicked(id){
 		if(res.won !== undefined){
 			if(res.won === "t"){
 				console.log("t won!");
-				renderImage(res.player, id);
+				showImage(res.player, id);
 				$('#status').text('Tie!');
 			}
 			else if(res.won === "x"){
-				renderImage(res.player, id);
+				showImage(res.player, id);
 				console.log("x won!");
 				$('#status').text('Player 1 WON!');				
 			}
 			else{
-				renderImage(res.player, id);
+				showImage(res.player, id);
 				console.log("o won!");
 				$('#status').text('Player 2 WON!');
 			}
 			console.log("won!");
 			on = "0";
-			return;
 		}
-		if(res.success === "1" && res.player === "x"){
-			renderImage(res.player, id);
+		else if(res.success === "1" && res.player === "x"){
+			showImage(res.player, id);
 			$('#status').text('Player 2 turn');
 		}
 		else if(res.success === "1" && res.player === "o"){
-			renderImage(res.player, id);
+			showImage(res.player, id);
 			$('#status').text('Player 1 turn');
 		}
 	    },
@@ -55,7 +54,7 @@ function clicked(id){
 
 function resetGame(){
 	on = "1";
-	$(".img").remove();
+	$(".img").hide();
         $.ajax({
 	    type: 'POST',
 	    url: '/newGame',
@@ -68,19 +67,6 @@ function resetGame(){
 	});
 }
 
-function renderImage(player, id){
-	if(player === "o"){
-		$('#' + id)
-        	.append($("<img></img>")
-        	.attr("class", "img")
-        	.attr("src", "img/thief.png")
-        	);
-	}
-	else{
-                $('#' + id)
-                .append($("<img></img>")
-                .attr("class", "img")
-                .attr("src", "img/scrooge.png")
-                );
-	}
+function showImage(player, id){
+	$('#' + id + player).show();
 }
