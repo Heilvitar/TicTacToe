@@ -21,5 +21,7 @@ The idea of the game TicTacToe is very simple. The game board in TicTacToe is a 
 ###Class Diagram 
 This following class diagram describes the structure of the web application by showing the classes, their attributes, methods, and the relationship among objects.
 
+![](pics/Class_Diagram.png?raw=true)
+
 The application is constructed mainly of three classes, Player, Board and Game. Player represents one player and contains the symbol that the player uses. Board class simply 
 
