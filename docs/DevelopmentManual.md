@@ -1,5 +1,5 @@
-emester 2015 - Software Engineering - T-303-HUGB
-##System Design Documentation
+Semester 2015 - Software Engineering - T-303-HUGB
+##System Development Documentation
 
 Team:
 Atli Gudmundsson, Brynja Skuladottir, Helgi Oskarsson, Hlynur Halldorsson, Ragna Lara Ellertsdottir, Steinar Agust Steinarsson
