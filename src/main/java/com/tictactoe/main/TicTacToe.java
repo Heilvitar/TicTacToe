@@ -4,7 +4,7 @@ import spark.servlet.SparkApplication;
 import org.json.simple.JSONObject;
 
 public class TicTacToe implements SparkApplication{
-    Game currentGame;
+    Game currentGame = null;
     public static void main(String[] args) {
 	staticFileLocation("/public");
 	SparkApplication ticTacToe = new TicTacToe();
