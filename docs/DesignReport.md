@@ -21,6 +21,7 @@ Test-driven development (TDD) was used when coding  the TicTacToe web applicatio
 
 The idea of the game TicTacToe is very simple. The game board in TicTacToe is a 3x3 grid and the players (both humans) take turns by pressing a cell, giving that sell a symbol, x or o. The player succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
+![](pics/TicTacToe_Diagram.png?raw=true)
 
 ###Class Diagram 
 This following class diagram describes the structure of the web application by showing the classes, their attributes, methods, and the relationship among objects.
@@ -33,4 +34,6 @@ A new game is initialized by creating incident of the Game class. The Game class
 ###User Interface
 
 The user interface is a 3x3 grid where players take turns by clicking a cell and a icon appears in that cell. Player1 always has the first turn. There is a text above the grid that shows the status of the game, which player's turn it is, if somebody won or if it is a tie.
+
+![](pics/UI_Sketch.png?raw=true)
 
