@@ -47,20 +47,24 @@ public class Game{
         // returns true if the currently active player has won the game
 	public boolean checkWin(){
 	        char cPSymbol = getCurrentPlayer().getSymbol();
+		// This forloop checks every possible vertical and horizontal wins for current player
 		for(int i = 0; i < 3; i++){
 		    // checks vertical wins
 		    if((gameBoard.getMark(i, 0) == cPSymbol) 
 		       && (gameBoard.getMark(i, 1) == cPSymbol) 
-		          && (gameBoard.getMark(i, 2) == cPSymbol)){
+		          && (gameBoard.getMark(i, 2) == cPSymbol))
+		    {
 				return true;
 		    }
 		    // checks horizontal wins
 		    else if((gameBoard.getMark(0, i) == cPSymbol) 
 			    && (gameBoard.getMark(1, i) == cPSymbol) 
-			       && (gameBoard.getMark(2, i) == cPSymbol)){
+			       && (gameBoard.getMark(2, i) == cPSymbol))
+		    {
 				return true;	
-			} 
+		    } 
 		}
+
 		// checks right diagonal wins
                 if((gameBoard.getMark(0,0) == cPSymbol) 
 		   && (gameBoard.getMark(1,1) == cPSymbol) 
