@@ -41,6 +41,7 @@ public class Game{
 	//gameBoard.mark();
 	public boolean checkWin(){
 	        char cPSymbol = getCurrentPlayer().getSymbol();
+		// This forloop checks every possible vertical and horizontal wins for current player
 		for(int i = 0; i < 3; i++){
 		    if((gameBoard.getMark(i, 0) == cPSymbol) && (gameBoard.getMark(i, 1) == cPSymbol) && (gameBoard.getMark(i, 2) == cPSymbol)){
 				return true;
@@ -50,8 +51,8 @@ public class Game{
 			} 
 			
 		}
-
-
+		
+		//Check diagonal wins for current player
                 if((gameBoard.getMark(0,0) == cPSymbol) && (gameBoard.getMark(1,1) == cPSymbol) && (gameBoard.getMark(2,2) == cPSymbol))
                 {
                         return true;
