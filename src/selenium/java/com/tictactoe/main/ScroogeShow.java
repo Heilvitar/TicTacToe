@@ -18,7 +18,7 @@ public class ScroogeShow {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "https://thawing-harbor-6879.herokuapp.com/";
+    baseUrl = "https://thawing-harbor-6879.herokuapp.com";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
