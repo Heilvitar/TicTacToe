@@ -23,6 +23,9 @@ Download the project from  https://github.com/Heilvitar/TicTacToe/archive/v1.0.z
 
 - Your app should be running now on http://localhost:4567
 
+
+### LINUX/MAC  
+
 __Required__
 
 - JDK http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
@@ -30,7 +33,7 @@ __Required__
 - Open the terminal and navigate the folder location. 
 - Run the application at the root of the TicTacToe folder and run this command in terminal  
 
-```shell
+  ```shell
   $   export PORT=4567
   $   ./gradlew run
   ```
