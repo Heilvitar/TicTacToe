@@ -28,20 +28,16 @@ public class ResetGame {
     driver.findElement(By.id("00")).click();
     for (int second = 0;; second++) {
     	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#00x")).getAttribute("style"))) break; } catch (Exception e) {}
+    	try { if ("Player 2 turn".equals(driver.findElement(By.id("status")).getText())) break; } catch (Exception e) {}
     	Thread.sleep(1000);
     }
 
-    assertEquals("display: inline;", driver.findElement(By.cssSelector("#00x")).getAttribute("style"));
-    driver.findElement(By.id("01")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#01o")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
+    try {
+      assertEquals("Player 2 turn", driver.findElement(By.id("status")).getText());
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
     }
-
-    assertEquals("display: inline;", driver.findElement(By.cssSelector("#01o")).getAttribute("style"));
-    driver.findElement(By.cssSelector("button.btn.btn-default")).click();
+    driver.findElement(By.cssSelector("button")).click();
     for (int second = 0;; second++) {
     	if (second >= 60) fail("timeout");
     	try { if ("Player 1 turn".equals(driver.findElement(By.id("status")).getText())) break; } catch (Exception e) {}
@@ -53,20 +49,6 @@ public class ResetGame {
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: none;".equals(driver.findElement(By.cssSelector("#00x")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: none;".equals(driver.findElement(By.cssSelector("#01o")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
-    assertEquals("display: none;", driver.findElement(By.cssSelector("#00x")).getAttribute("style"));
-    assertEquals("display: none;", driver.findElement(By.cssSelector("#01o")).getAttribute("style"));
   }
 
   @After

@@ -26,61 +26,13 @@ public class Tie {
   public void testTie() throws Exception {
     driver.get(baseUrl + "/");
     driver.findElement(By.id("00")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#00x")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("01")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#01o")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("11")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#11x")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("22")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#22o")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("02")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#02x")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("20")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#20o")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("10")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#10x")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("12")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#12o")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("21")).click();
     for (int second = 0;; second++) {
     	if (second >= 60) fail("timeout");

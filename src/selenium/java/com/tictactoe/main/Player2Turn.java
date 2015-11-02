@@ -26,12 +26,6 @@ public class Player2Turn {
   public void testPlayer2Turn() throws Exception {
     driver.get(baseUrl + "/");
     driver.findElement(By.id("00")).click();
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("display: inline;".equals(driver.findElement(By.cssSelector("#00x")).getAttribute("style"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
     driver.findElement(By.id("01")).click();
     for (int second = 0;; second++) {
     	if (second >= 60) fail("timeout");
