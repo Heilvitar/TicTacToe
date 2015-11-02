@@ -80,19 +80,15 @@ dependencies {
     testCompile 'junit:junit:4.11'
 
     seleniumCompile 'junit:junit:4.11'
-    seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
 
     seleniumXvfbCompile 'junit:junit:4.11'
-    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
 }
 
 task selenium(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
-
-    doFirst {
-        'build/install/TicTacToe/bin/tictactoe &'.execute()
-    }
 }
 
 task seleniumXvfb(type: Test, dependsOn: installDist) {
@@ -103,11 +99,11 @@ task seleniumXvfb(type: Test, dependsOn: installDist) {
 
     doFirst {
         'bin/xvfb start'.execute()
-        'build/install/TicTacToe/bin/tictactoe &'.execute()
+        'build/install/tictactoe/bin/tictactoe &'.execute()
     }
 
     doLast {
-        'bin/xvfb stop'.execute()
+        'sh -e /etc/init.d/xvfb stop'.execute()
     } 
 }
 
