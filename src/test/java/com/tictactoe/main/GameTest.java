@@ -10,15 +10,15 @@ public class GameTest
 
         @Test
         public void testPlayer1Test(){
-		assertSame('x', testGame.player1.getSymbol());
+		assertEquals('x', testGame.player1.getSymbol());
         }
         @Test
         public void testPlayer2Test(){
-                assertSame('o', testGame.player2.getSymbol());
+                assertEquals('o', testGame.player2.getSymbol());
         }
 	@Test	
  	public void testBoard(){
-                assertSame('-', testGame.gameBoard.getMark(1, 2));
+                assertEquals('-', testGame.gameBoard.getMark(1, 2));
         }
         @Test
 	public void testPlayersTurn(){
