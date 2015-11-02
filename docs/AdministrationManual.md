@@ -15,10 +15,12 @@ __Required__
 Download the project from  https://github.com/Heilvitar/TicTacToe/archive/v1.0.zip to your local computer and extract the zip file
 - open command prompt and navigate the folder
 - Run the application at the root of the TicTacToe folder and run this command in cmd  
+
   ```shell  
   set PORT=4567  
   gradlew run  
   ```  
+
 - Your app should be running now on http://localhost:4567
 
 __Required__
@@ -27,10 +29,12 @@ __Required__
 - Download the project from  https://github.com/Heilvitar/TicTacToe/archive/v1.0.zip to your local computer and extract the zip file
 - Open the terminal and navigate the folder location. 
 - Run the application at the root of the TicTacToe folder and run this command in terminal  
-  ```shell
+
+```shell
   $   export PORT=4567
   $   ./gradlew run
   ```
+
 - Your app should be running now on http://localhost:4567
 
 
